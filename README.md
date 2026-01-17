@@ -4,7 +4,7 @@ Real-time spectral analysis application for the AS7343 18-channel spectral senso
 
 ![Spectrum Display](https://github.com/benb0jangles/PySpectrometer-AS7343/blob/main/img/spectrum-20260117-143753.png)
 
-Video Demo here >>> [Youtube Demo](https://youtu.be/pZ6r_J6pA9g)
+Video Demo here >>> [Youtube Demo](https://youtu.be/eOc9nWSASqQ)
 
 
 ## Overview
