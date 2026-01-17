@@ -39,8 +39,8 @@ pip install opencv-python numpy scipy pyserial
 Upload the AS7343 firmware to your ESP32-C3:
 ```bash
 # Open in Arduino IDE:
-# ../as7343_18ch_gain/as7343_18ch_gain_esp32c3/as7343_18ch_gain_esp32c3.ino
-# Board: ESP32C3 Dev Module
+# as7343_18ch_gain_esp32c3.ino
+# Board: Seeed_Xiao_ESP32C3 Dev Module
 # Upload
 ```
 
@@ -48,19 +48,19 @@ Upload the AS7343 firmware to your ESP32-C3:
 
 ```bash
 cd PySpectrometer-AS7343
-python PySpectrometer-AS7343.py
+python3 PySpectrometer-AS7343.py
 ```
 
 With options:
 ```bash
 # Specify serial port
-python PySpectrometer-AS7343.py --port /dev/ttyUSB0
+python3 PySpectrometer-AS7343.py --port /dev/ttyUSB0
 
 # Start fullscreen
-python PySpectrometer-AS7343.py --fullscreen
+python3 PySpectrometer-AS7343.py --fullscreen
 
 # Disable waterfall display
-python PySpectrometer-AS7343.py --no-waterfall
+python3 PySpectrometer-AS7343.py --no-waterfall
 ```
 
 ## Keyboard Controls
@@ -179,7 +179,7 @@ Similar process using a quantum sensor for reference.
 | Sensor | Camera + diffraction grating | AS7343 spectral sensor |
 | Resolution | 800 continuous points | 8 discrete wavelengths |
 | Wavelength Range | ~380-780nm (calibration dependent) | 405-600nm (fixed) |
-| Hardware Cost | $50-300 (grating + camera) | $20-50 (sensor + MCU) |
+| Hardware Cost | $50-300 (grating + camera) | $13-20 (sensor + MCU) |
 | Setup | Optical alignment required | Plug and play |
 | GUI Framework | OpenCV | OpenCV |
 | Waterfall | Yes | Yes |
@@ -212,6 +212,10 @@ Similar process using a quantum sensor for reference.
 - **PySpectrometer2** by Les Wright - Original inspiration and algorithm reference
 - **AS7343 Datasheet** by ams-OSRAM - Channel specifications
 - **SparkFun** - AS7343 Arduino library
+
+## Author
+
+- Benb0jangles (2026)
 
 ## License
 
