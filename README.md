@@ -4,6 +4,9 @@ Real-time spectral analysis application for the AS7343 18-channel spectral senso
 
 ![Spectrum Display](https://github.com/benb0jangles/PySpectrometer-AS7343/blob/main/img/Screenshot%202026-01-17%20at%2009.55.39.png)
 
+Video Demo here >>> ![Youtube Demo](https://youtu.be/pZ6r_J6pA9g)
+
+
 ## Overview
 
 PySpectrometer-AS7343 transforms the AS7343 discrete spectral sensor into a visual spectrometer with:
