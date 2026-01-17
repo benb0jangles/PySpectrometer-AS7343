@@ -112,22 +112,27 @@ Time-stacked spectra showing how the spectrum changes over time. Newest data app
 
 ## AS7343 Channel Mapping
 
-The AS7343 provides 8 spectral channels (plus Clear, NIR, and duplicates):
+PySpectrometer-AS7343 uses all 12 spectral channels of the AS7343, displayed in wavelength order:
 
-| Channel | Wavelength | Color |
-|---------|------------|-------|
-| F1 | 405nm | Violet |
-| F2 | 425nm | Deep Violet |
-| FZ | 450nm | Blue |
-| F3 | 475nm | Cyan |
-| F4 | 515nm | Green |
-| FY | 555nm | Yellow-Green |
-| F5 | 550nm | Yellow-Green |
-| FXL | 600nm | Orange |
+| # | Key | Channel | Wavelength | Color |
+|---|-----|---------|------------|-------|
+| 1 | `1` | F1 | 405nm | Violet |
+| 2 | `2` | F2 | 425nm | Deep Violet |
+| 3 | `3` | FZ | 450nm | Blue |
+| 4 | `4` | F3 | 475nm | Cyan |
+| 5 | `5` | F4 | 515nm | Green |
+| 6 | `6` | F5 | 550nm | Yellow-Green |
+| 7 | `7` | FY | 555nm | Yellow-Green |
+| 8 | `8` | FXL | 600nm | Orange |
+| 9 | `9` | F6 | 620nm | Orange-Red |
+| 10 | `a` | F7 | 670nm | Red |
+| 11 | `b` | F8 | 730nm | Deep Red |
+| 12 | `n` | NIR | 855nm | Near-Infrared |
 
-Additional channels:
+The display range extends from 380nm to 905nm to show the full channel bandwidth coverage. The spectrum curve tapers naturally to zero at both edges.
+
+Additional channels (not used for this project):
 - **Clear**: Broadband visible light
-- **NIR**: 855nm near-infrared
 - **F4L, FYL, F5L, FXLL**: Left-side duplicates
 - **FD, FDL**: Flicker detection
 
