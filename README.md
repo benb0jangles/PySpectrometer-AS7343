@@ -183,60 +183,6 @@ Similar process using a quantum sensor for reference.
 | Peak Detection | Yes | Yes |
 | Savitzky-Golay | Yes | Yes |
 
-## Architecture
-
-```
-┌─────────────────────────────────────────────────────┐
-│                  PySpectrometer-AS7343               │
-├─────────────────────────────────────────────────────┤
-│                                                      │
-│  ┌──────────┐    Serial    ┌──────────────────┐    │
-│  │ AS7343   │◄────────────►│ ESP32-C3         │    │
-│  │ Sensor   │   115200     │ (Firmware)       │    │
-│  └──────────┘   baud       └────────┬─────────┘    │
-│                                      │ USB          │
-│                                      ▼              │
-│  ┌──────────────────────────────────────────────┐  │
-│  │              Python Application               │  │
-│  ├──────────────────────────────────────────────┤  │
-│  │  ┌─────────────┐  ┌─────────────────────┐   │  │
-│  │  │ Serial      │  │ specFunctions.py    │   │  │
-│  │  │ Reader      │  │ - wavelength_to_rgb │   │  │
-│  │  │ (Thread)    │  │ - savitzky_golay    │   │  │
-│  │  └──────┬──────┘  │ - find_peaks        │   │  │
-│  │         │         │ - interpolate       │   │  │
-│  │         ▼         └─────────────────────┘   │  │
-│  │  ┌─────────────────────────────────────┐    │  │
-│  │  │         Data Processing             │    │  │
-│  │  │  - Interpolation (cubic spline)     │    │  │
-│  │  │  - Smoothing (Savitzky-Golay)       │    │  │
-│  │  │  - Peak detection                   │    │  │
-│  │  │  - Metrics calculation              │    │  │
-│  │  └──────────────┬──────────────────────┘    │  │
-│  │                 │                           │  │
-│  │                 ▼                           │  │
-│  │  ┌─────────────────────────────────────┐    │  │
-│  │  │         OpenCV Rendering            │    │  │
-│  │  │  - Header (status, metrics)         │    │  │
-│  │  │  - Spectrum bar (color intensity)   │    │  │
-│  │  │  - Main graph (rainbow fill)        │    │  │
-│  │  │  - Waterfall (time history)         │    │  │
-│  │  └─────────────────────────────────────┘    │  │
-│  └──────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────┘
-```
-
-## File Structure
-
-```
-PySpectrometer-AS7343/
-├── PySpectrometer-AS7343.py  # Main application
-├── specFunctions.py          # Utility functions
-├── README.md                 # This file
-├── as7343_calibration.json   # Calibration data (auto-created)
-└── media/                    # Screenshots (optional)
-```
-
 ## Troubleshooting
 
 ### No serial ports found
