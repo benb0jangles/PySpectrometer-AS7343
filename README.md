@@ -2,7 +2,7 @@
 
 Real-time spectral analysis application for the AS7343 18-channel spectral sensor, inspired by [PySpectrometer2](https://github.com/leswright1977/PySpectrometer2) by Les Wright.
 
-![Spectrum Display](https://github.com/benb0jangles/PySpectrometer-AS7343/blob/main/img/Screenshot%202026-01-17%20at%2009.55.39.png)
+![Spectrum Display](https://github.com/benb0jangles/PySpectrometer-AS7343/blob/main/img/spectrum-20260117-143753.png)
 
 Video Demo here >>> [Youtube Demo](https://youtu.be/pZ6r_J6pA9g)
 
