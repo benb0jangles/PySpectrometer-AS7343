@@ -1,4 +1,4 @@
-# PySpectrometer-AS7343
+#PySpectrometer-AS7343
 
 Real-time spectral analysis application for the AS7343 18-channel spectral sensor, inspired by [PySpectrometer2](https://github.com/leswright1977/PySpectrometer2) by Les Wright.
 
