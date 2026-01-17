@@ -184,7 +184,7 @@ Similar process using a quantum sensor for reference.
 | Feature | PySpectrometer2 | PySpectrometer-AS7343 |
 |---------|----------------|----------------------|
 | Sensor | Camera + diffraction grating | AS7343 spectral sensor |
-| Resolution | 800 continuous points | 8 discrete wavelengths |
+| Resolution | 800 continuous points | 12 discrete wavelengths |
 | Wavelength Range | ~380-780nm (calibration dependent) | 405-600nm (fixed) |
 | Hardware Cost | $50-300 (grating + camera) | $13-20 (sensor + MCU) |
 | Setup | Optical alignment required | Plug and play |
